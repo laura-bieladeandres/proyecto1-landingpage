@@ -1,7 +1,7 @@
 :root {
-  --color-bg: #EEEEEE;
-  --color-light: #F5F5F5;
-  --color-dark: #141615;
+  --color-white: #ffffff;
+  --color-light: #d2d2d2;
+  --color-black: #141615;
   --color-gray: #D9D9D9;
   --color-accent-red: #B20000;
   --color-accent-blue: #0010A1;
@@ -82,7 +82,7 @@ body {
   height: 480px;
   display: flex;
   align-items: flex-end;
-  color: #fff;
+  color: #ffffff;
 }
 .hero-content {
   margin-left: 50px;
@@ -101,7 +101,7 @@ body {
 
 .cards-section {
   padding: 60px 0;
-  background: var(--color-light);
+  background: var(--color-white);
 }
 .card-row {
   display: flex;
@@ -111,14 +111,14 @@ body {
   flex-wrap: wrap;
 }
 .card {
-  background: #fff;
+  background: var(--color-gray);
   border-radius: 15px;
   padding: 20px;
   width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .card-header {
   margin-bottom: 12px;
@@ -127,8 +127,7 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
-.electric { color: var(--color-accent-red); }
-.hybrid { color: var(--color-accent-blue); }
+
 .card-model {
   display: block;
   font-size: 14px;
@@ -148,8 +147,8 @@ body {
   width: 100%;
 }
 .card-footer button {
-  background: #000;
-  color: #fff;
+  background: #ffffff;
+  color: #000000;
   border: none;
   border-radius: 30px;
   padding: 8px 18px;
@@ -175,16 +174,16 @@ body {
 .swatch.darkred { background: var(--color-darkred); }
 .swatch.wine { background: var(--color-wine); }
 
-.dealer-section {
+.discover-section {
   position: relative;
   height: 400px;
 }
-.dealer-bg {
+.discover-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.dealer-overlay {
+.discover-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
@@ -196,11 +195,11 @@ body {
   text-align: center;
   padding: 20px;
 }
-.dealer-overlay h2 {
+.discover-overlay h2 {
   font-size: 32px;
   margin-bottom: 20px;
 }
-.dealer-btn {
+.discover-btn {
   background: #fff;
   color: #000;
   border-radius: 40px;
@@ -210,7 +209,7 @@ body {
 }
 
 .features-section {
-  background: var(--color-light);
+  background: var(--color-white);
   padding: 40px 0;
 }
 .features-scroll {
@@ -222,7 +221,7 @@ body {
 }
 .feature-card {
   flex: 0 0 280px;
-  background: #fff;
+  background: var(--color-light);
   border-radius: 10px;
   padding: 20px;
   scroll-snap-align: start;
@@ -243,7 +242,30 @@ body {
   background: #ccc;
   border-radius: 4px;
 }
-
+.confort-btn {
+  background: #fff;
+  color: #000;
+  border-radius: 40px;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.technology-btn {
+  background: #fff;
+  color: #000;
+  border-radius: 40px;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.accesories-btn {
+  background: #fff;
+  color: #000;
+  border-radius: 40px;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 16px;
+}
 .award-section {
   display: flex;
   background: url('/resources/red-maybach.png') center/cover no-repeat;
@@ -271,7 +293,7 @@ body {
   gap: 20px;
 }
 .wheels-content { flex: 1; }
-.wheels-content h3 { font-size: 24px; margin-bottom: 18px; }
+.wheels-content h3 { font-size: 24px; margin-bottom: 18px;}
 .wheels-text {
   max-width: 480px;
   line-height: 1.6;
@@ -291,18 +313,20 @@ body {
 }
 
 .cta-band {
-  background: #eee;
-  text-align: center;
+  background: #404243;
+  font-size: 12px;
   padding: 40px 20px;
+  color:#ccc
 }
 .contact-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 32px;
-  background: #000;
-  color: #fff;
+  margin-top: 5x;
+  padding: 10px 20px;
+  background: #ffffff;
+  color: #000000;
   border-radius: 40px;
   text-decoration: none;
+  font-size: 8px;
 }
 
 .footer {
@@ -310,53 +334,131 @@ body {
   color: #fff;
   padding: 60px 10%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  font-family: 'Inter', sans-serif;
 }
-.newsletter { flex: 1 1 300px; }
+
+/* === NEWSLETTER === */
+.newsletter {
+  text-align: center;
+  max-width: 600px;
+}
+
+.newsletter h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  color: #b8b8b8;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
 .newsletter form {
   display: flex;
-  gap: 8px;
-  margin: 12px 0;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  overflow: hidden;
+  max-width: 550px;
+  margin: 0 auto 15px;
 }
+
 .newsletter input {
   flex: 1;
-  padding: 10px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 4px;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
 }
+
 .newsletter button {
-  padding: 10px 20px;
   background: #fff;
   color: #000;
   border: none;
-  border-radius: 30px;
+  padding: 14px 25px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 40px;
+}
+
+.newsletter-consent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #b8b8b8;
+  margin-top: 10px;
+}
+
+.newsletter-consent input[type="checkbox"] {
+  accent-color: #ffffff;
+  width: 14px;
+  height: 14px;
   cursor: pointer;
 }
-.footer-links {
-  flex: 2 1 500px;
-  display: flex;
-  gap: 40px;
+
+.newsletter-consent a {
+  color: #fff;
+  text-decoration: underline;
 }
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #b8b8b8;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  text-align: left;
+  max-width: 1000px;
+}
+
 .footer-links h5 {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
+
 .footer-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
+
 .footer-links ul li {
   margin-bottom: 6px;
 }
+
 .footer-links ul li a {
-  color: #fff;
+  color: #b8b8b8;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 .footer-links ul li a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
 .scroll-arrow {
@@ -373,8 +475,9 @@ body {
   justify-content: center;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(255,255,255,0.3);
 }
+
 
 @media (max-width: 768px) {
   .nav { flex-direction: column; height: auto; padding: 12px; }
